@@ -202,3 +202,49 @@ p {
       }
    }
 }
+
+@media (min-width: 768px) {
+   .showcase {
+      .showcase-title {
+         font-size: 2.5rem !important;
+      }
+
+      .search-form-container {
+         border-radius: 200px !important;
+         padding: 1em 2em !important;
+      }
+
+      .form-inputs {
+         flex-direction: row !important;
+      }
+
+      .input-control {
+         border-right: 1px solid $gray;
+         padding: 0 0.5em;
+         margin-bottom: 0 !important;
+
+         &:last-child {
+            border: none;
+         }
+      }
+
+      label {
+         padding-left: 0.5em;
+      }
+
+      input {
+         border: none !important;
+         padding-left: 0.5em;
+         font-size: 0.95rem !important;
+      }
+
+      .submit-btn {
+         top: 50%;
+         left: auto;
+         right: 1%;
+         transform: translate(-0%, -50%);
+         font-size: 1.55em;
+         margin: 0;
+      }
+   }
+}
