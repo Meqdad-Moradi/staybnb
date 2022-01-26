@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import "colors";
+@import "vars";
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+}
+
+*::first-letter {
+   text-transform: uppercase;
+}
+
+html {
+   scroll-behavior: smooth;
+   scroll-padding-top: 70px;
+}
+
+body {
+   font-weight: 400;
+   font-size: 1rem;
+   line-height: 1.8;
+   color: $black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+   line-height: 1;
+   margin-bottom: 0.5em;
+}
+
+img {
+   width: 100%;
+   display: block;
+}
+
+a {
+   text-decoration: none;
+}
+
+ul {
+   list-style: none;
+}
+
+p {
+   margin-top: 1em;
+   color: $dark;
+}
+
+.container {
+   width: 90%;
+   max-width: 1100px;
+   margin-inline: auto;
+}
+
+/* --------- layouts --------------*/
+.showcase {
+   background-image: linear-gradient(
+         90deg,
+         rgba(0, 0, 0, 0.5),
+         rgba(0, 0, 0, 0.5)
+      ),
+      url("../images/banner.png");
+   background-position: center;
+   background-size: cover;
+   height: 100vh;
+   position: relative;
+
+   .header {
+      position: relative;
+      height: 80px;
+      @include flex();
+      z-index: 9999;
+
+      &.sticky-header {
+         background-color: $white;
+      }
+
+      .container {
+         @include flex();
+      }
+
+      .logo {
+         img {
+            width: 8em;
+         }
+      }
+
+      .nav {
+         position: fixed;
+         height: 100vh;
+         width: 80%;
+         inset: 0 0 0 auto;
+         z-index: 99;
+         background-color: $dark;
+         @include flex();
+         transform: translateX(100%);
+         transition: all 0.5s ease-in-out;
+
+         &.active {
+            transform: translateX(0);
+         }
+      }
+
+      .nav-list {
+         @include flex(column, space-evenly, $ai: start);
+         padding-left: 1em;
+         width: 100%;
+      }
+
+      .nav-item {
+         a {
+            color: $white;
+            padding: 0.5em 0.5em 0.5em 1em;
+            margin-bottom: 0.5em;
+            display: inline-block;
+            width: 100%;
+            transition: all 0.4s ease-in-out;
+         }
+      }
+
+      .toggler {
+         cursor: pointer;
+         padding: 0.5em;
+         position: relative;
+         z-index: 100;
+
+         span {
+            height: 2px;
+            width: 22px;
+            background-color: $white;
+            display: block;
+            margin: 0.3em;
+            margin-right: 0;
+            border-radius: 0.5em;
+            transform-origin: 21px;
+            transition: all 0.4s ease-in-out;
+         }
+
+         &.active {
+            span:nth-child(1) {
+               transform: rotate(-45deg);
+            }
+            span:nth-child(2) {
+               opacity: 0;
+            }
+            span:nth-child(3) {
+               transform: rotate(45deg);
+            }
+         }
+      }
+   }
+}

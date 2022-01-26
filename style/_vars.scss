@@ -1,0 +1,15 @@
+@mixin flex($fd: row, $fw: nowrap, $jc: space-between, $ai: center) {
+   display: flex;
+   flex-direction: $fd;
+   flex-wrap: $fw;
+   justify-content: $jc;
+   align-items: $ai;
+}
+
+@mixin grid($minmax: 15rem, $jc: space-between, $ai: center) {
+   display: grid;
+   gap: 3em;
+   grid-template-columns: repeat(auto-fit, minmax($minmax, 1fr));
+   justify-content: $jc;
+   align-items: $ai;
+}

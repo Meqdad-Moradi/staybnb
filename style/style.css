@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*::first-letter {
+  text-transform: uppercase;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin-top: 1em;
+  color: #3c4145;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+/* --------- layouts --------------*/
+.showcase {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/banner.png");
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner.png");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.showcase .header {
+  position: relative;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9999;
+}
+
+.showcase .header.sticky-header {
+  background-color: #fff;
+}
+
+.showcase .header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.showcase .header .logo img {
+  width: 8em;
+}
+
+.showcase .header .nav {
+  position: fixed;
+  height: 100vh;
+  width: 80%;
+  inset: 0 0 0 auto;
+  z-index: 99;
+  background-color: #3c4145;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.showcase .header .nav.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.showcase .header .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: space-evenly;
+      flex-wrap: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding-left: 1em;
+  width: 100%;
+}
+
+.showcase .header .nav-item a {
+  color: #fff;
+  padding: 0.5em 0.5em 0.5em 1em;
+  margin-bottom: 0.5em;
+  display: inline-block;
+  width: 100%;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.showcase .header .toggler {
+  cursor: pointer;
+  padding: 0.5em;
+  position: relative;
+  z-index: 100;
+}
+
+.showcase .header .toggler span {
+  height: 2px;
+  width: 22px;
+  background-color: #fff;
+  display: block;
+  margin: 0.3em;
+  margin-right: 0;
+  border-radius: 0.5em;
+  -webkit-transform-origin: 21px;
+          transform-origin: 21px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.showcase .header .toggler.active span:nth-child(1) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.showcase .header .toggler.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.showcase .header .toggler.active span:nth-child(3) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+/*# sourceMappingURL=style.css.map */
