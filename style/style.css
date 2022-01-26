@@ -1,4 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+form .input-control:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+form .input-control label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #3c4145;
+  text-transform: capitalize;
+}
+
+form .input-control input {
+  width: 100%;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #acacac;
+  background-color: #fff;
+  color: #3c4145;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+form .input-control input:hover, form .input-control input:focus {
+  border-color: #3c4145;
+}
+
+form .submit-btn {
+  margin-top: 2em;
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  line-height: 1;
+  border-radius: 100%;
+  padding: 1em;
+  border: none;
+  background-color: #ff252b;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -109,7 +156,7 @@ p {
 }
 
 .showcase .header .logo img {
-  width: 8em;
+  width: 10em;
 }
 
 .showcase .header .nav {
@@ -175,6 +222,24 @@ p {
   transition: all 0.4s ease-in-out;
 }
 
+.showcase .header .register-btn {
+  margin-left: auto;
+  display: inline-block;
+  margin-right: 1em;
+  color: #3c4145;
+  background-color: #fff;
+  padding: 0.3em 1.5em;
+  border-radius: 50px;
+  text-transform: capitalize;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.showcase .header .register-btn:hover {
+  background-color: #ff252b;
+  color: #eeeeee;
+}
+
 .showcase .header .toggler {
   cursor: pointer;
   padding: 0.5em;
@@ -208,5 +273,41 @@ p {
 .showcase .header .toggler.active span:nth-child(3) {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.showcase .content {
+  position: absolute;
+  inset: 60% auto auto 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70vw;
+}
+
+.showcase .content .showcase-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 1em;
+  color: #fff;
+  text-align: center;
+}
+
+.showcase .content .search-form-container {
+  background-color: #fff;
+  padding: 1.5em 2em 2.5em;
+  border-radius: 0.5em;
+  position: relative;
+}
+
+.showcase .content .form-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=style.css.map */

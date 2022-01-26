@@ -13,3 +13,52 @@
    justify-content: $jc;
    align-items: $ai;
 }
+
+form {
+   .input-control {
+      &:not(:last-child) {
+         margin-bottom: 0.5em;
+      }
+
+      label {
+         display: block;
+         font-size: 1rem;
+         font-weight: 500;
+         color: $dark;
+         text-transform: capitalize;
+      }
+
+      input {
+         width: 100%;
+         font-size: 1rem;
+         font-family: "Poppins", sans-serif;
+         outline: none;
+         border: 0;
+         border-bottom: 1px solid $gray;
+         background-color: $white;
+         color: $dark;
+         transition: all 0.4s ease-in-out;
+
+         &:hover,
+         &:focus {
+            border-color: $dark;
+         }
+      }
+   }
+
+   .submit-btn {
+      margin-top: 2em;
+      position: absolute;
+      left: 50%;
+      bottom: -20px;
+      transform: translateX(-50%);
+      line-height: 1;
+      border-radius: 100%;
+      padding: 1em;
+      border: none;
+      background-color: $main;
+      color: $white;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+   }
+}
