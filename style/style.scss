@@ -118,8 +118,14 @@ p {
             padding: 0.5em 0.5em 0.5em 1em;
             margin-bottom: 0.5em;
             display: inline-block;
+            text-transform: capitalize;
             width: 100%;
             transition: all 0.4s ease-in-out;
+
+            &:hover,
+            &.active {
+               color: $main;
+            }
          }
       }
 
@@ -203,15 +209,49 @@ p {
    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 840px) {
    .showcase {
+      .header {
+         .nav {
+            position: initial;
+            height: initial;
+            width: initial;
+            transform: translateX(0);
+            margin-left: auto;
+            background-color: transparent;
+         }
+
+         .nav-list {
+            @include flex(row, space-between, center);
+            padding: 0;
+         }
+
+         .nav-item {
+            margin-left: 2em;
+
+            a {
+               margin: 0;
+               padding: 0;
+            }
+         }
+
+         .toggler {
+            display: none;
+         }
+      }
+
+      // show case content
+      .content {
+         width: 70vw;
+      }
+
       .showcase-title {
          font-size: 2.5rem !important;
       }
 
       .search-form-container {
          border-radius: 200px !important;
-         padding: 1em 2em !important;
+         padding: 0.5em 1em !important;
       }
 
       .form-inputs {
@@ -243,7 +283,7 @@ p {
          left: auto;
          right: 1%;
          transform: translate(-0%, -50%);
-         font-size: 1.55em;
+         font-size: 1.3em;
          margin: 0;
       }
    }
